@@ -1,13 +1,38 @@
 
 public class Gluecksspiel {
+	
+	
 
-	public static void main(String[] args) {
+   public static void main(String[] args) {
+	   
+	   boolean geschlecht = true;
+		 int alter = 15;
+		 String name = "Susanne";	
+		 
 		
-		if(Math.random()<=0.42){
-			System.out.println("Verloren!");
+	   if(alter < 18){
+		
+		 System.out.println("Hallo " + name +"!");
+		 System.out.println("Du hast " + wuerfeln()+"!");	
+	 
+	   } else if(!geschlecht){
+		 System.out.println("Lieber Herr " + name +"!");
+		 System.out.println("Sie haben " + wuerfeln()+"!");
+	  
+	   }else{
+		   System.out.println("Liebe Frau " + name+"!");
+		   System.out.println("Sie haben " + wuerfeln()+"!");
+	   }
+		   
+	   }
+	   public static String wuerfeln(){
+	   
+	   
+	   if(Math.random()<=0.42){
+			return "Verloren!" ;
 		}
 		else{
-			System.out.println("Gewonnen!");
+			return "Gewonnen!" ;
 	}
 
 }
